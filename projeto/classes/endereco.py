@@ -5,7 +5,7 @@ class Endereco:
         self.numero = self._verificar_numero(numero)
         self.complemento = self._verificar_complemento(complemento)
         self.cep = self._verificar_cep(cep)
-        self.cidade = cidade
+        self.cidade = self._verificar_cidade(cidade)
     
     # Método para verificação.
     def _verificar_logradouro(self, valor):
