@@ -28,10 +28,6 @@ class Engenheiro(Pessoa):
     def inicializar(self):
         return super().inicializar()
 
-        
-    def __str__(self) -> str:
-        return (
-            f"\nEngenheiro:"
-            f"{super().__str__()}"
-            f"\nNúmero de CREA: {self.crea}"
-        )
+    # Implementando o método abstrato.
+    def salario_final(self) -> float:
+        return self.salario_base  
