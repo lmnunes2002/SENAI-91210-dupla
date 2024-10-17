@@ -6,6 +6,13 @@ def endereco_valido():
     endereco = Endereco("Rua dos Curiós", "123", "apartamento 101", "12345-678", "Salvador")
     return endereco
 
+def test_endereco_valido(endereco_valido):
+    assert endereco_valido.logradouro == "Rua dos Curiós"
+    assert endereco_valido.numero == "123"
+    assert endereco_valido.complemento ==  "apartamento 101"
+    assert endereco_valido.cep == "12345-678"
+    assert endereco_valido.cidade == "Salvador"
+
 def test_logradouro_tipo_invalido_retorna_mensagem():
     with pytest.raises(TypeError, match="O logradouro deve ser um texto."):
         Endereco(123, "123", "apartamento 101", "12345-678", "Salvador")

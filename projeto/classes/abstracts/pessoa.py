@@ -1,4 +1,4 @@
-from classes.endereco import Endereco
+from projeto.classes.endereco import Endereco
 from abc import ABC, abstractmethod
 
 class Pessoa(ABC):
@@ -62,13 +62,3 @@ class Pessoa(ABC):
 
         if not isinstance(valor, str):
             raise TypeError("O email deve se manter como texto.")
-    
-
-    
-    def __str__(self) -> str:
-        return (
-            f"\nNome: {self.nome}"
-            f"\nTelefone: {self.telefone}"
-            f"\nEmail: {self.email}"
-            f"\nEndereço: {self.endereco}"
-        )
