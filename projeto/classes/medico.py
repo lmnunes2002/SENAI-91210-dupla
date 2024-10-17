@@ -3,10 +3,10 @@ from projeto.classes.endereco import Endereco
 
 class Medico(Pessoa):
     # Construtor.
-    def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, crm: str, salarioFinal: float) -> None:
+    def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, crm: str, salario_final: float) -> None:
         super().__init__(nome, telefone, email, endereco)
         self.crm = self._verificar_crm(crm)
-        self.salarioFinal = self.salario_final(salarioFinal)
+        self.salario_final_base = salario_final
 
     # Método de verificação.
     def _verificar_crm(self, valor):
@@ -35,4 +35,4 @@ class Medico(Pessoa):
         
    # Implementando o método abstrato.
     def salario_final(self) -> float:
-        return self.salario_base  
+        return self.salario_final_base * 1.4
