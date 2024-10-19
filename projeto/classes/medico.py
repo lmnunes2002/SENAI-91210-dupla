@@ -18,7 +18,7 @@ class Medico(Pessoa):
         self.crm = valor
         return valor
     
-        # Método auxiliar
+    # Método auxiliar
     def __verificar_crm_invalido(self, valor):
         if not isinstance(valor, str):
             raise TypeError("O CRM deve ser alfa-numérico.")
